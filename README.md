@@ -26,24 +26,24 @@ If this works out for you the demo site can be modified and costumised to become
 
 The Keystone authors recommend you use the new [Yeoman Generator](https://github.com/JedWatson/generator-keystone) as the basis for new projects, as this demo site contains code specific to runing a public demo (like user account protection, etc).
 
-If you do want to use this as a starting point however, you are welcome.
+If you do want to use this as a starting point however, you are welcome. It should also give you an idea regarding howto host a Keynote CMS on Openshift.
 
 ## Howto get Openshift
 
-You can get a free or paid-for Openshift cloud account here : https://manage.openshift.com/
+You can get a free or paid-for Openshift cloud account here : https://manage.openshift.com
 Alternatively you can install a small openshift platform on your own laptop/PC using [minishift](https://docs.openshift.org/latest/minishift/index.html)
 
 ## Technical background information
 
 The Openshift template file "openshift_template.json" instructs your openshift platform to create two hosts/pods:
 
-    * mongodb server with a persistent volume to store data
-    * nodejs server wich runs the Keynote CMS (a route is published to this pod so that this site can be accessed from the outside)
+* mongodb server with a persistent volume to store data
+* nodejs server wich runs the Keynote CMS (a route is published so that this site can be accessed from the outside)
 
-The difference between this repository and the original demo site repository is very small :
+The difference between this repository and the original Keynote demo site repository is very small :
 
-    * the keystone.js file was slightly modified to allow Keystone to receive information from Openshift regarding generated mongodb usernames, passwords, IP address, etc.
-    * the "openshift_template.json" file, containing information about how Openshift should deploy the application, was added.
+* the keystone.js file was slightly modified to allow Keystone to receive information from Openshift regarding generated mongodb usernames, passwords, IP address, etc.
+* the "openshift_template.json" file, containing information about how Openshift should deploy the application, was added.
 
 ## License
 
