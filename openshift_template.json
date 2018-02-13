@@ -162,7 +162,7 @@
             "imageChangeParams": {
               "automatic": true,
               "containerNames": [
-                "nodejs-mongo-persistent"
+                "keystone-demo-persistent"
               ],
               "from": {
                 "kind": "ImageStreamTag",
